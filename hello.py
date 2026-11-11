@@ -1,8 +1,12 @@
+
 import os
 
-print("Hello from Jenkins!")
+environment = os.getenv("ENVIRONMENT", "QA")
+branch = os.getenv("BRANCH_NAME", "main")
 
-branch = os.getenv("BRANCH_NAME", "Not provided")
-
-print(f"Selected Branch: {branch}")
-print("Python execution completed successfully.")
+print("================================")
+print("JENKINS BUILD DETAILS")
+print("================================")
+print(f"Environment: {environment}")
+print(f"Branch: {branch}")
+print("Build execution successful!")
